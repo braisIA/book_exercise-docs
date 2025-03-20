@@ -10,7 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+Integramos funcionalidades de monitoreo del rendimiento del sistema. Específicamente, hemos creado y conectado el SystemPerformanceManager a la aplicación principal del CDA, permitiéndole iniciar y detener tareas de monitoreo del rendimiento. Además, hemos implementado la clase base para las tareas de utilización del sistema y clases específicas para monitorear el uso de la CPU y la memoria.
+
 How does your implementation work?
+
+La implementación comienza inicializando el SystemPerformanceManager dentro de ConstrainedDeviceApp. Este administrador es responsable de programar y gestionar las tareas de monitoreo del rendimiento del sistema. Dos tareas de utilidad principales, SystemCpuUtilTask y SystemMemUtilTask, recopilan métricas de utilización de la CPU y la memoria, respectivamente. Estas tareas heredan de BaseSystemUtilTask, que proporciona funcionalidades comunes. El SystemPerformanceManager inicia y detiene estas tareas como parte del ciclo de vida del CDA.
 
 ### Code Repository and Branch
 
@@ -24,9 +28,9 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
-- 
-- 
+- SystemPerformanceManagerTest
+- SystemCpuUtilTaskTest
+- SystemMemUtilTaskTest
 
 ### Integration Tests Executed
 
@@ -35,7 +39,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
+- ConstrainedDeviceAppTest
 - 
 - 
 
