@@ -13,7 +13,9 @@ What does your implementation do?
 Asegura que cada uno de estos datos esté correctamente encapsulado en sus respectivas clases (ActuatorData, SensorData, SystemPerformanceData), con los métodos adecuados para obtener, establecer y manipular estos valores. Además, he creado las pruebas unitarias para verificar que:
 
 Los valores por defecto de cada clase son correctos.
+
 Los valores se pueden modificar correctamente.
+
 El comportamiento de los métodos es adecuado y se ajusta a lo esperado (por ejemplo, la correcta serialización a formato CSV).
 
 En resumen, mi implementación crea y prueba las clases para manejar los datos esenciales de los sensores y actuadores en un entorno IoT, lo cual es el objetivo principal del Lab 5.
