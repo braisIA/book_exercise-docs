@@ -10,7 +10,25 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+Permite que el componente DeviceDataManager se conecte y se comunique con un broker MQTT utilizando la clase MqttClientConnector. Esto habilita la funcionalidad de publicar y suscribirse a mensajes MQTT, permitiendo enviar datos desde el dispositivo y recibir comandos para los actuadores. También maneja correctamente la conexión y desconexión del cliente MQTT al iniciar y detener el sistema, respectivamente.
+
 How does your implementation work?
+
+Inicialización Condicional de MQTT:
+
+En el constructor de DeviceDataManager, se verifica una configuración (ENABLE_MQTT_CLIENT_KEY). Si está habilitada, se instancia un MqttClientConnector y se configura con un listener de mensajes de datos.
+
+Conexión y Suscripción al Iniciar:
+
+En el método startManager(), si MQTT está habilitado, el cliente MQTT se conecta al broker y se suscribe al tópico CDA_ACTUATOR_CMD_RESOURCE, que recibe comandos para actuadores.
+
+Publicación de Datos:
+
+Cuando se reciben datos de sensores o del sistema, se publican aguas arriba a través del cliente MQTT usando publishMessage().
+
+Desconexión y Cancelación de Suscripción al Detener:
+
+En stopManager(), el cliente MQTT se desuscribe del tópico de comandos y se desconecta del broker, liberando recursos.
 
 ### Code Repository and Branch
 
@@ -36,7 +54,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
+- MqttClientConnectorTest
 - 
 - 
 
