@@ -34,7 +34,7 @@ En stopManager(), el cliente MQTT se desuscribe del tópico de comandos y se des
 
 NOTE: Be sure to include the branch.
 
-URL: 
+URL: https://github.com/braisIA/python-components/commit/3a8e023a3f578477fd9649926eb05c35833d473f
 
 
 ### Unit Tests Executed
