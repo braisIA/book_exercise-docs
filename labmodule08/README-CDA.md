@@ -10,13 +10,29 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+Mi implementación configura y ejecuta un servidor CoAP personalizado utilizando Python, específicamente con la biblioteca CoAPthon3. Este servidor expone varios recursos que representan dispositivos IoT simulados, como sensores y actuadores. También desarrollé pruebas automatizadas e integración con el cliente Californium, permitiendo enviar solicitudes CoAP (como GET o POST) desde un cliente externo para probar el comportamiento del servidor.
+
+En resumen, mi implementación permite enviar y recibir mensajes CoAP entre un cliente y un servidor para simular la comunicación en un entorno IoT.
+
 How does your implementation work?
+
+La implementación se basa en una clase CoapServerAdapter que extiende y configura un servidor CoAP utilizando la librería CoAPthon3. Dentro de esta clase, se registran recursos con rutas específicas como:
+
+/PIOT/ConstrainedDevice/SystemPerfMsg para mensajes de rendimiento del sistema,
+
+/PIOT/ConstrainedDevice/ActuatorCmd/HumidifierActuator para comandos a actuadores.
+
+Cada recurso tiene un handler que gestiona peticiones GET o POST, según el caso.
+
+Durante las pruebas, se puede arrancar el servidor usando unittest, lo cual también permite automatizar su verificación. Luego, el cliente Californium, construido y ejecutado por separado en Java, envía solicitudes CoAP que son recibidas y procesadas por mi servidor Python.
+
+Esto demuestra la interoperabilidad entre distintos entornos y lenguajes de programación mediante el protocolo CoAP.
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
 
-URL: 
+URL: https://github.com/braisIA/python-components/commit/b713bb531deb1dc424d9fc9a9a26158c8c7a093c
 
 
 
