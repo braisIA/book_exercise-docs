@@ -52,7 +52,7 @@ Esto permite una comunicación bidireccional y basada en eventos entre el GDA y 
 
 NOTE: Be sure to include the branch.
 
-URL: 
+URL: https://github.com/braisIA/java-components/pull/6/commits/9d841d6a777967f95d2ab4c95273bc764aafc08c
 
 
 ### Unit Tests Executed
@@ -61,7 +61,7 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
+- CoapServerGatewayTest.java
 - 
 - 
 
