@@ -10,13 +10,31 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+Mi implementación permite conectar un dispositivo embebido (CDA) con una aplicación de puerta de enlace (GDA) y, desde allí, transmitir datos hacia un servicio en la nube utilizando el protocolo MQTT. Específicamente, los datos generados por el CDA, como lecturas de sensores o métricas de rendimiento del sistema (CPU, memoria, etc.), se envían al GDA, que a su vez los publica en tópicos específicos del proveedor cloud.
+
 How does your implementation work?
+
+El flujo de funcionamiento es el siguiente:
+
+El CDA genera datos (como temperatura, uso de CPU o memoria) y los envía al GDA mediante MQTT o CoAP.
+
+El GDA recibe estos datos y los gestiona a través de su clase DeviceDataManager, que detecta el tipo de datos recibido.
+
+Si el cliente cloud está habilitado (enableCloudClient = true), el GDA usa la clase CloudClientConnector, que:
+
+Se conecta al broker MQTT del proveedor cloud (por ejemplo, Ubidots).
+
+Publica los datos en tópicos específicos configurados en el archivo PiotConfig.props.
+
+Los mensajes se publican en formato JSON, transformados a partir de objetos SensorData o SystemPerformanceData.
+
+La conexión y publicación se hacen de forma robusta utilizando MqttClientConnector como backend MQTT, con soporte para autenticación, conexión segura y configuración de QoS.
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
 
-URL: 
+URL: https://github.com/braisIA/java-components/tree/practica11
 
 
 ### Unit Tests Executed
