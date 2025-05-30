@@ -55,6 +55,7 @@ since you need to ensure you haven't introduced regressions.
     Más lento: NON
 
 - DeviceDataManagerCallbackTest
+- MqttClientConnectorTest
 
 ### Integration Tests Executed
 
