@@ -41,7 +41,18 @@ since you need to ensure you haven't introduced regressions.
   QoS más rápido: QoS 0
 
   QoS más lento: QoS 2
-- 
+  
+- CoapClientPerformanceTest
+
+  CDA CoAP Client Performance Test Results (Java)
+
+
+    POST - CON: 15866 ms  
+    POST - NON: 16727 ms  
+    
+    Diferencia porcentual (CON vs NON): ≈ 5.42%  
+    Más rápido: CON  
+    Más lento: NON
 - 
 - 
 
