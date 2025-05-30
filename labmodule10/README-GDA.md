@@ -53,7 +53,8 @@ since you need to ensure you haven't introduced regressions.
     Diferencia porcentual (CON vs NON): ≈ 5.42%  
     Más rápido: CON  
     Más lento: NON
-- 
+  
+-  DeviceDataManagerWithCommsTest.java
 - 
 
 ### Integration Tests Executed
