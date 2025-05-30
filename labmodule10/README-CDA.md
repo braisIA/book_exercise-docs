@@ -56,6 +56,7 @@ since you need to ensure you haven't introduced regressions.
 
 - DeviceDataManagerCallbackTest
 - MqttClientConnectorTest
+- DeviceDataManagerIntegrationTest
 
 ### Integration Tests Executed
 
