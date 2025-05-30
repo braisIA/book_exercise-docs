@@ -25,7 +25,22 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
+- MqttClientPerformanceTest.py
+  
+  CDA MQTT Client Performance Test Results
+  Tiempo de conexión y desconexión: 1030.43 ms
+
+  Prueba de Publicación con 10,000 mensajes
+
+    QoS 0: 0.785 s
+
+    QoS 1: 1.695 s → diferencia del 116% respecto a QoS 0
+
+    QoS 2: 2.438 s → diferencia del 210% respecto a QoS 0
+
+  QoS más rápido: QoS 0
+
+  QoS más lento: QoS 2
 - 
 - 
 
