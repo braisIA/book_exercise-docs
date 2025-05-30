@@ -26,6 +26,21 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
+- MqttClientPerformanceTest
+  GDA MQTT Client Performance Test Results
+  Tiempo de conexión y desconexión: 304 ms
+
+  Prueba de Publicación con 10,000 mensajes
+
+  - QoS 0: 0.846 s
+
+  - QoS 1: 1.057 s → diferencia del 25% respecto a QoS 0
+
+  - QoS 2: 1.956 s → diferencia del 131% respecto a QoS 0
+
+  QoS más rápido: QoS 0
+
+  QoS más lento: QoS 2
 - 
 - 
 - 
