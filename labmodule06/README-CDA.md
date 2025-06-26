@@ -34,7 +34,7 @@ En stopManager(), el cliente MQTT se desuscribe del tópico de comandos y se des
 
 NOTE: Be sure to include the branch.
 
-URL: https://github.com/braisIA/python-components/commit/3a8e023a3f578477fd9649926eb05c35833d473f
+URL: https://github.com/braisIA/python-components/commit/ecbc2967d4029d6d1e10671238ab827225cc4472
 
 
 ### Unit Tests Executed
@@ -55,7 +55,7 @@ your code to ensure it's correct. As for the tests you execute, you only need to
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
 - MqttClientConnectorTest
-- 
+- MqttClientControlPacketTest
 - 
 
 EOF.
