@@ -20,7 +20,7 @@ La implementación utiliza la clase MqttClientConnector que encapsula la lógica
 
 NOTE: Be sure to include the branch.
 
-URL: https://github.com/braisIA/java-components/commit/9a72ed985ae90a2a4c7823ccde3d87fb0c64e733
+URL: https://github.com/braisIA/java-components/commit/cce1889ac53b796f6833dd00a954de51be3b88d6
 
 
 ### Unit Tests Executed
