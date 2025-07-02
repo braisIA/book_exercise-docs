@@ -52,7 +52,7 @@ Esto permite una comunicación bidireccional y basada en eventos entre el GDA y 
 
 NOTE: Be sure to include the branch.
 
-URL: https://github.com/braisIA/java-components/pull/6/commits/9d841d6a777967f95d2ab4c95273bc764aafc08c
+URL: https://github.com/braisIA/java-components/commit/41499db6f635ae461a25d670abf3f99a9e4ac57d
 
 
 ### Unit Tests Executed
